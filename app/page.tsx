@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
+import { UrlShortener } from "@/components/url-shortener"
 
 export default function Home() {
   return (
@@ -57,11 +58,6 @@ export default function Home() {
 
       {/* Hero */}
       <section className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl flex-col items-center px-6 py-16 text-center md:py-24">
-        <div className="relative">
-          <Badge variant="secondary" className="rounded-full px-4 py-1.5 text-sm">
-            ✨ Now with analytics
-          </Badge>
-        </div>
 
         <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
           Shorten your links.
@@ -77,27 +73,7 @@ export default function Home() {
         </p>
 
         {/* URL Shortener */}
-        <Card className="mt-10 w-full max-w-2xl border-2 shadow-lg">
-          <CardContent className="p-2">
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <div className="relative flex-1">
-                <Input
-                  type="url"
-                  placeholder="Paste your long URL here..."
-                  className="h-12 border-0 pl-4 shadow-none focus-visible:ring-0"
-                />
-              </div>
-              <Button size="lg" className="h-12 px-6 sm:px-8">
-                Shorten URL
-                <ArrowRight className="ml-1 h-4 w-4" />
-              </Button>
-            </div>
-          </CardContent>
-          <CardFooter className="flex justify-between border-t px-3 py-2 text-xs text-muted-foreground">
-            <span>🔒 Secure &amp; private</span>
-            <span>⚡ Instant results</span>
-          </CardFooter>
-        </Card>
+        <UrlShortener />
 
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
           <span>Try it with:</span>
